@@ -680,6 +680,17 @@
                   }
                 ]
               }
+            },
+            {
+              "name": "Long-term Rates",
+              "type": "geojson",
+              "url": "https://shoreline-change-viewer-data.s3.us-east-2.amazonaws.com/ratesLT/National_Shoreline_Change_Rates_LT.geojson",
+              "id": "National_Shoreline_Change_Rates_LT.geojson",
+              "defaultStyle": {
+                "color": {
+                  "colorColumn": "LRR"
+                }
+              }
             }
           ]
         },
@@ -719,7 +730,8 @@
       ]
     }
   ],
-  "viewerMode": "3dSmooth",
+  "viewerMode": "2d",
+  "previewedItemId": "National_Shoreline_Change_Rates_LT.geojson",
   "baseMaps": {
     "defaultBaseMapId": "basemap-openstreetmap",
     "previewBaseMapId": "basemap-natural-earth-II"
