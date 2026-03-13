@@ -686,11 +686,16 @@
               "type": "geojson",
               "url": "https://shoreline-change-viewer-data.s3.us-east-2.amazonaws.com/ratesLT/National_Shoreline_Change_Rates_LT.geojson",
               "id": "National_Shoreline_Change_Rates_LT.geojson",
-              "defaultStyle": {
-                "color": {
-                  "colorColumn": "LRR"
+              "styles": [
+                {
+                  "id": "lrr",
+                  "title": "Long-term Rate (LRR)",
+                  "color": {
+                    "colorColumn": "LRR"
+                  }
                 }
-              }
+              ],
+              "activeStyle": "lrr"
             }
           ]
         },
@@ -731,9 +736,28 @@
     }
   ],
   "viewerMode": "2d",
-  "previewedItemId": "National_Shoreline_Change_Rates_LT.geojson",
+  "workbench": ["National_Shoreline_Change_Rates_LT.geojson"],
   "baseMaps": {
-    "defaultBaseMapId": "basemap-openstreetmap",
+    "items": [
+      {
+        "item": {
+          "id": "basemap-mapbox-dark",
+          "name": "Mapbox Dark",
+          "type": "mapbox-style",
+          "styleId": "dark-v11",
+          "accessToken": "pk.eyJ1IjoiemVoYW94dWUiLCJhIjoiY21tb2o5c3oyMGVmajJycTVsdnAzbThscSJ9.doT3dHGI14bFcH-kaUQaYg",
+          "opacity": 1.0
+        },
+        "image": "https://terria-catalogs-public.storage.googleapis.com/misc/basemaps/icons/mapbox-dark.png",
+        "contrastColor": "#ffffff"
+      }
+    ],
+    "enabledBaseMaps": [
+      "basemap-mapbox-dark",
+      "basemap-openstreetmap",
+      "basemap-natural-earth-II"
+    ],
+    "defaultBaseMapId": "basemap-mapbox-dark",
     "previewBaseMapId": "basemap-natural-earth-II"
   }
 }
